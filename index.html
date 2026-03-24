@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CV/Portfolio – Michael Stive Cano · Cloud Engineer (Prácticas) · AWS · Terraform · Kubernetes" />
+  <title>Michael Stive Cano · Cloud Engineer (Prácticas)</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Topbar -->
+  <header class="topbar" id="top">
+    <div class="container topbar__inner">
+      <a class="brand" href="#top" aria-label="Inicio">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">
+          <span class="brand__name">Michael Stive Cano</span>
+          <span class="brand__role">Cloud Engineer (Prácticas)</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          <span class="nav__toggleBars" aria-hidden="true"></span>
+          <span class="sr-only">Abrir menú</span>
+        </button>
+
+        <div class="nav__menu" id="navMenu">
+          <a class="nav__link" href="#about">About</a>
+          <a class="nav__link" href="#skills">Skills</a>
+          <a class="nav__link" href="#experience">Experiencia</a>
+          <a class="nav__link" href="#projects">Proyectos</a>
+          <a class="nav__link" href="#blogs">Blogs</a>
+          <a class="nav__link nav__cta" href="#contact">Contacto</a>
+
+          <button class="iconBtn" id="themeToggle" type="button" aria-label="Cambiar tema">
+            <span class="iconBtn__dot" aria-hidden="true"></span>
+            <span class="iconBtn__text">Tema</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero" aria-label="Presentación">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="kicker">
+            <span class="kicker__dot" aria-hidden="true"></span>
+            Valencia (presencial) · Híbrido o remoto en el resto de España
+          </p>
+
+          <h1 class="hero__title">
+            Portfolio de <span class="gradientText">Cloud Engineering</span><br />
+            con foco en <span class="hero__emph">reproducibilidad</span> y <span class="hero__emph">operación</span>.
+          </h1>
+
+          <p class="hero__subtitle">
+            Estoy construyendo 3 proyectos para prácticas como Cloud Engineer: un despliegue escalable en AWS,
+            un stack reproducible con Terraform y un laboratorio de Kubernetes con health probes.
+            Mi objetivo es demostrar habilidades con <b>evidencias</b>: diagramas, runbooks y capturas.
+          </p>
+
+          <div class="pillRow" role="list" aria-label="Tecnologías objetivo">
+            <span class="pill" role="listitem">AWS · EC2 · ALB · ASG · RDS</span>
+            <span class="pill" role="listitem">Terraform · módulos · outputs</span>
+            <span class="pill" role="listitem">Docker · Kubernetes · Ingress</span>
+            <span class="pill" role="listitem">Observabilidad · logs · métricas · alarmas</span>
+          </div>
+
+          <div class="btnRow">
+            <a class="btn btn--primary" href="#projects">Ver proyectos</a>
+            <a class="btn" href="#contact">Contactar</a>
+            <button class="btn btn--ghost" id="printBtn" type="button">Descargar PDF (Imprimir)</button>
+          </div>
+
+          <p class="micro">
+            Tip: en cuanto tengas enlaces reales, actualiza GitHub/LinkedIn y añade evidencias (capturas + README).
+          </p>
+        </div>
+
+        <aside class="heroCard" aria-label="Resumen rápido">
+          <div class="heroCard__top">
+            <div class="avatar" aria-label="Foto (placeholder)">
+              <span class="avatar__initials">MSC</span>
+            </div>
+            <div>
+              <p class="heroCard__name">Michael Stive Cano</p>
+              <p class="heroCard__meta">Cloud Engineer (Prácticas)</p>
+            </div>
+          </div>
+
+          <div class="heroCard__items">
+            <div class="kv">
+              <p class="kv__k">Objetivo</p>
+              <p class="kv__v">Prácticas Cloud Engineer · AWS + IaC</p>
+            </div>
+            <div class="kv">
+              <p class="kv__k">Ubicación</p>
+              <p class="kv__v">Valencia (presencial) · España (híbrido/remoto)</p>
+            </div>
+            <div class="kv">
+              <p class="kv__k">Entrega</p>
+              <p class="kv__v">README + diagrama + runbook + evidencias</p>
+            </div>
+          </div>
+
+          <div class="heroCard__links">
+            <a class="chipLink" href="#" title="Pon aquí tu GitHub">GitHub</a>
+            <a class="chipLink" href="#" title="Pon aquí tu LinkedIn">LinkedIn</a>
+            <a class="chipLink" href="mailto:tu-email@dominio.com" title="Pon tu email real">Email</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionHead__title">About</h2>
+          <p class="sectionHead__desc">
+            Perfil orientado a prácticas: mentalidad de operación, documentación clara y entregables reproducibles.
+          </p>
+        </div>
+
+        <div class="grid2">
+          <article class="card">
+            <h3 class="card__title">Resumen</h3>
+            <p class="card__text">
+              Me estoy preparando para desempeñarme como Cloud Engineer en prácticas.
+              Estoy enfocando mi portfolio en 3 proyectos reales (AWS / Terraform / Kubernetes) con evidencias técnicas
+              y documentación tipo “equipo real” (arquitectura, runbooks, troubleshooting).
+            </p>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Qué aporto al equipo</h3>
+            <ul class="list">
+              <li>Reproducibilidad: pasos claros, IaC, configuración separada por entorno.</li>
+              <li>Operabilidad: health checks, logs/métricas/alertas, runbooks.</li>
+              <li>Seguridad base: secretos fuera del repo, mínimos privilegios (IAM/SG).</li>
+              <li>Comunicación: claridad, seguimiento y mentalidad de soporte.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionHead__title">Technical Skills</h2>
+          <p class="sectionHead__desc">Una selección curada de tecnologías que aprenderé y evidenciaré en mis proyectos.</p>
+        </div>
+
+        <div class="skillsToolbar">
+          <p class="muted">
+            Mostrando <span id="skillsShown">12</span> de <span id="skillsTotal">0</span>
+          </p>
+          <button class="btn btn--small" id="skillsToggle" type="button">Show All</button>
+        </div>
+
+        <div class="skillsGrid" id="skillsGrid" aria-label="Skills"></div>
+
+        <p class="muted footNote">
+          …y más herramientas que irán apareciendo a medida que avance con los proyectos (CI/CD, observabilidad, etc.).
+        </p>
+      </div>
+    </section>
+
+    <!-- Resume -->
+    <section class="section" id="resume">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionHead__title">My Resume</h2>
+          <p class="sectionHead__desc">Puedes añadir aquí tu CV en PDF cuando lo tengas (o usar el botón de imprimir).</p>
+        </div>
+
+        <div class="card card--row">
+          <div>
+            <h3 class="card__title">Descargar CV (PDF)</h3>
+            <p class="card__text muted">Sube tu PDF al repo y enlázalo aquí cuando esté listo.</p>
+          </div>
+          <a class="btn btn--primary" href="#" title="Enlaza tu PDF aquí">Download Resume</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionHead__title">Professional Experience & Projects</h2>
+          <p class="sectionHead__desc">Formato timeline para mostrar progreso y trabajo orientado a impacto.</p>
+        </div>
+
+        <div class="timeline" aria-label="Experiencia">
+          <article class="timelineItem">
+            <div class="timelineItem__date">2026 · En curso</div>
+            <div class="timelineItem__content card">
+              <h3 class="card__title">Cloud Engineer (Prácticas) · Portfolio Track</h3>
+              <p class="muted">Valencia / España</p>
+              <p class="card__text">
+                Construcción de proyectos con enfoque en arquitectura, IaC, observabilidad y documentación operativa.
+              </p>
+              <ul class="list">
+                <li>AWS: ALB + ASG + RDS + SSM + CloudWatch con evidencias.</li>
+                <li>Terraform: módulos + entornos + outputs + (opcional) remote state.</li>
+                <li>Kubernetes: deploy + ingress + liveness/readiness + troubleshooting.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timelineItem">
+            <div class="timelineItem__date">Formación</div>
+            <div class="timelineItem__content card">
+              <h3 class="card__title">Máster en Cloud Computing (UPV)</h3>
+              <p class="muted">Valencia</p>
+              <p class="card__text">Enfoque: cloud, sistemas distribuidos, prácticas DevOps y operación.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionHead__title">My Projects</h2>
+          <p class="sectionHead__desc">
+            Proyectos con filtros por tags. Ahora están en “MVP en construcción” y se irán llenando con evidencias.
+          </p>
+        </div>
+
+        <div class="projectsTop">
+          <p class="muted">
+            Total projects: <span id="projectsTotal">0</span> · Mostrando: <span id="projectsShown">0</span>
+          </p>
+          <button class="btn btn--small" id="projectsToggle" type="button">Show All</button>
+        </div>
+
+        <div class="tagBox" aria-label="Filtro por tags">
+          <h3 class="tagBox__title">Filter by tags</h3>
+          <div class="tagRow" id="tagRow"></div>
+          <div class="tagActions">
+            <button class="btn btn--tiny" id="clearTags" type="button">Clear filters</button>
+            <span class="muted micro" id="activeTagsInfo">No filters</span>
+          </div>
+        </div>
+
+        <div class="projectsGrid" id="projectsGrid" aria-label="Listado de proyectos"></div>
+      </div>
+    </section>
+
+    <!-- Blogs -->
+    <section class="section" id="blogs">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionHead__title">My Recent Blogs ✍️</h2>
+          <p class="sectionHead__desc">
+            Puedes conectar esta sección a Dev.to o dejarla como “coming soon” hasta que publiques tus primeros posts.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="blogState" id="blogState">
+            <div class="spinner" aria-hidden="true"></div>
+            <p class="muted" id="blogStateText">Loading blog posts...</p>
+          </div>
+          <div class="blogList" id="blogList" hidden></div>
+
+          <div class="divider"></div>
+
+          <a class="btn btn--primary" href="#" title="Pon tu link de Dev.to o Medium">Read All Blogs</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="sectionHead">
+          <h2 class="sectionHead__title">Connect With Me</h2>
+          <p class="sectionHead__desc">Un formulario simple + datos directos (email, ciudad). Cambia placeholders cuando tengas todo.</p>
+        </div>
+
+        <div class="grid2">
+          <article class="card">
+            <h3 class="card__title">Contacto directo</h3>
+            <div class="contactKV">
+              <div class="kv">
+                <p class="kv__k">Email</p>
+                <p class="kv__v"><a href="mailto:tu-email@dominio.com">tu-email@dominio.com</a></p>
+              </div>
+              <div class="kv">
+                <p class="kv__k">Ubicación</p>
+                <p class="kv__v">Valencia, España</p>
+              </div>
+              <div class="kv">
+                <p class="kv__k">Modalidad</p>
+                <p class="kv__v">Presencial (Valencia) · Híbrido/Remoto (España)</p>
+              </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="heroCard__links">
+              <a class="chipLink" href="#" title="Añade tu GitHub">GitHub</a>
+              <a class="chipLink" href="#" title="Añade tu LinkedIn">LinkedIn</a>
+              <a class="chipLink" href="#" title="Añade tu Calendly (opcional)">Calendly</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3 class="card__title">Send Message</h3>
+
+            <form class="form" id="contactForm">
+              <label class="field">
+                <span class="field__label">Nombre</span>
+                <input class="field__input" name="name" placeholder="Tu nombre" autocomplete="name" required />
+              </label>
+
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__input" type="email" name="email" placeholder="tu@email.com" autocomplete="email" required />
+              </label>
+
+              <label class="field">
+                <span class="field__label">Mensaje</span>
+                <textarea class="field__input field__area" name="message" placeholder="Hola Michael, vi tu portfolio..." required></textarea>
+              </label>
+
+              <button class="btn btn--primary" type="submit">Enviar</button>
+              <p class="micro muted" id="formHint">
+                Nota: este formulario es “frontend-only”. Para envío real puedes usar Formspree / Netlify Forms / AWS SES.
+              </p>
+            </form>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="muted">© <span id="year"></span> · Michael Stive Cano · CV Web</p>
+        <a class="muted" href="#top">Volver arriba ↑</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
