@@ -121,10 +121,11 @@ const PROJECTS = [
     desc: "Arquitectura web altamente disponible en AWS con VPC multi-AZ, Application Load Balancer, Auto Scaling Group, EC2, Nginx, health checks y tolerancia a fallos.",
     tags: ["AWS", "EC2", "ALB", "Auto Scaling", "Nginx"],
     status: "Cloud Architecture",
+    image: "assets/img/projects/hight_available_web_architecture.png",
+    imageAlt: "Diagrama de arquitectura web altamente disponible en AWS",
     links: {
-      github: "https://github.com/MICHAEL2193/cloud-deploy-platform",
-      live: null,
-    },
+      github: "https://github.com/MICHAEL2193/cloud-deploy-platform"
+    }
   },
   {
     title: "Cloud Deploy Platform",
@@ -132,10 +133,11 @@ const PROJECTS = [
     desc: "Despliegue de una API Node.js con Docker y Nginx, con infraestructura automatizada en AWS mediante Terraform, EC2, IAM y Systems Manager.",
     tags: ["AWS", "Docker", "Terraform", "Node.js", "SSM"],
     status: "DevOps / IaC",
+    image: "assets/img/projects/cloud-deploy-platform.png",
+    imageAlt: "Proyecto Cloud Deploy Platform con AWS Docker y Terraform",
     links: {
-      github: "https://github.com/MICHAEL2193/cloud-deploy-platform",
-      live: null,
-    },
+      github: "https://github.com/MICHAEL2193/cloud-deploy-platform"
+    }
   },
   {
     title: "miniOIA4DL",
@@ -143,22 +145,24 @@ const PROJECTS = [
     desc: "Optimización de operaciones Conv2D sobre CIFAR-100 con Python y NumPy, analizando cuellos de botella y mejoras de rendimiento.",
     tags: ["Python", "NumPy", "Deep Learning", "Performance"],
     status: "Performance Optimization",
+    image: "assets/img/projects/miniOIA.png",
+    imageAlt: "Proyecto miniOIA4DL de optimización de rendimiento en deep learning",
     links: {
-      github: "https://github.com/MICHAEL2193/miniOIA4DL",
-      live: null,
-    },
+      github: "https://github.com/MICHAEL2193/miniOIA4DL"
+    }
   },
   {
     title: "Valencia de 15 minutos",
     subtitle: "Python + Streamlit + GeoData",
-    desc: "Dashboard geoespacial con datos oficiales y OpenStreetMap para scoring, clustering y visualización interactiva de accesibilidad urbana en barrios de Valencia.",
-    tags: ["Python", "Streamlit", "GeoData", "OpenStreetMap", "Data Science"],
-    status: "Data / GeoAnalytics",
+    desc: "Dashboard geoespacial con datos oficiales y OpenStreetMap para scoring, clustering y visualización interactiva de accesibilidad urbana.",
+    tags: ["Python", "Streamlit", "GeoData", "Data Science"],
+    status: "Data Visualization",
+    image: "assets/img/projects/valencia_15_minutos.png",
+    imageAlt: "Dashboard geoespacial Valencia de 15 minutos",
     links: {
-      github: "https://github.com/MICHAEL2193/Valencia_de_15_minutos",
-      live: null,
-    },
-  },
+      github: "https://github.com/MICHAEL2193/Valencia_de_15_minutos"
+    }
+  }
 ];
 
 /* ---------------------------
@@ -390,38 +394,51 @@ function renderProjects() {
   paint();
 }
 
-function projectCardHtml(project) {
-  const tags = project.tags
+function projectCardHtml(p) {
+  const tags = p.tags
     .slice(0, 6)
-    .map((tag) => `<span class="metaChip">${escapeHtml(tag)}</span>`)
+    .map(t => `<span class="metaChip">${escapeHtml(t)}</span>`)
     .join("");
 
-  const links = [];
-
-  if (project.links.github) {
-    links.push(`<a class="actionLink" href="${escapeAttr(project.links.github)}" target="_blank" rel="noopener noreferrer">GitHub</a>`);
-  }
-
-  if (project.links.live) {
-    links.push(`<a class="actionLink" href="${escapeAttr(project.links.live)}" target="_blank" rel="noopener noreferrer">Live</a>`);
-  }
+  const githubUrl = p.links?.github || "#";
 
   return `
-    <article class="projectCard">
+    <a
+      class="projectCard projectCard--clickable"
+      href="${escapeAttr(githubUrl)}"
+      target="_blank"
+      rel="noreferrer"
+      aria-label="Abrir repositorio de ${escapeAttr(p.title)}"
+    >
       <div class="projectCard__cover">
-        <span class="projectCard__coverLabel">${escapeHtml(project.status)}</span>
+        ${
+          p.image
+            ? `<img
+                class="projectCard__image"
+                src="${escapeAttr(p.image)}"
+                alt="${escapeAttr(p.imageAlt || p.title)}"
+                loading="lazy"
+                decoding="async"
+              />`
+            : ""
+        }
+        <span class="projectCard__coverLabel">${escapeHtml(p.status)}</span>
       </div>
 
       <div class="projectCard__body">
-        <p class="projectCard__subtitle">${escapeHtml(project.subtitle)}</p>
-        <h3 class="projectCard__title">${escapeHtml(project.title)}</h3>
-        <p class="projectCard__desc">${escapeHtml(project.desc)}</p>
+        <p class="projectCard__subtitle">${escapeHtml(p.subtitle || "")}</p>
+        <h3 class="projectCard__title">${escapeHtml(p.title)}</h3>
+        <p class="projectCard__desc">${escapeHtml(p.desc)}</p>
 
-        <div class="projectCard__meta">${tags}</div>
+        <div class="projectCard__meta">
+          ${tags}
+        </div>
 
-        <div class="projectCard__actions">${links.join("")}</div>
+        <div class="projectCard__actions">
+          <span class="actionLink">GitHub</span>
+        </div>
       </div>
-    </article>
+    </a>
   `;
 }
 
