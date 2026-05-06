@@ -910,3 +910,344 @@ body {
   font-size: 14px;
   line-height: 1.4;
 }
+
+/* ---------------------------
+   Social icons in hero card
+---------------------------- */
+
+.chipLink--icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.chipLink__icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  display: block;
+  filter: var(--social-icon-filter, none);
+}
+
+.chipLink__mailIcon {
+  font-size: 15px;
+  line-height: 1;
+}
+
+:root:not([data-theme="light"]) .chipLink__icon {
+  filter: invert(1);
+}
+
+/* ---------------------------
+   Premium About Section
+---------------------------- */
+
+.aboutSection {
+  position: relative;
+}
+
+.sectionLabel {
+  margin: 0 0 8px;
+  color: var(--accent2);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.sectionHead--about {
+  margin-bottom: 18px;
+}
+
+.sectionHead--about .sectionHead__title {
+  font-size: clamp(26px, 3vw, 36px);
+  line-height: 1.12;
+  letter-spacing: -0.7px;
+}
+
+.sectionHead--about .sectionHead__desc {
+  max-width: 980px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.aboutHeroCard {
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background:
+    radial-gradient(900px 420px at 10% 0%, rgba(124,58,237,.18), transparent 58%),
+    radial-gradient(900px 420px at 95% 10%, rgba(34,211,238,.14), transparent 55%),
+    linear-gradient(180deg, var(--surface2), transparent);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.aboutHeroCard::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  background:
+    linear-gradient(120deg, rgba(124,58,237,.25), transparent 28%),
+    linear-gradient(300deg, rgba(34,211,238,.18), transparent 30%);
+  pointer-events: none;
+  opacity: .45;
+}
+
+.aboutHeroCard__content,
+.aboutFocusGrid,
+.aboutValueSection {
+  position: relative;
+  z-index: 1;
+}
+
+.aboutHeroCard__content {
+  display: grid;
+  grid-template-columns: 1.25fr .75fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+@media (max-width: 980px) {
+  .aboutHeroCard__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+.aboutHeroCard__main {
+  padding: 6px;
+}
+
+.aboutTag {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  color: var(--text);
+  border: 1px solid rgba(34,211,238,.24);
+  background: linear-gradient(135deg, rgba(124,58,237,.22), rgba(34,211,238,.12));
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.aboutHeroCard__title {
+  margin: 0 0 14px;
+  font-size: clamp(24px, 2.8vw, 34px);
+  line-height: 1.14;
+  letter-spacing: -0.7px;
+  max-width: 850px;
+}
+
+.aboutHeroCard__text {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.75;
+  max-width: 900px;
+}
+
+.aboutHeroCard__text strong {
+  color: var(--text);
+  font-weight: 750;
+}
+
+.aboutStats {
+  display: grid;
+  gap: 14px;
+}
+
+.aboutStat {
+  min-height: 126px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+  background:
+    radial-gradient(400px 160px at 20% 0%, rgba(34,211,238,.13), transparent 60%),
+    rgba(255,255,255,.045);
+}
+
+.aboutStat__value {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 850;
+  letter-spacing: -1px;
+  background: linear-gradient(135deg, var(--accent2), var(--accent1));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.aboutStat__label {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.aboutFocusGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 22px;
+}
+
+@media (max-width: 1100px) {
+  .aboutFocusGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .aboutFocusGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.aboutFocusItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  min-height: 156px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,.055), transparent);
+  transition: transform .18s ease, border-color .18s ease, background .18s ease;
+}
+
+.aboutFocusItem:hover {
+  transform: translateY(-3px);
+  border-color: rgba(34,211,238,.28);
+  background: linear-gradient(180deg, rgba(34,211,238,.07), transparent);
+}
+
+.aboutFocusItem__icon {
+  width: 46px;
+  height: 46px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background:
+    radial-gradient(180px 90px at 30% 20%, rgba(124,58,237,.18), transparent 60%),
+    rgba(255,255,255,.05);
+}
+
+.aboutFocusItem__icon img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
+}
+
+:root:not([data-theme="light"]) .aboutFocusItem__icon img {
+  filter: invert(1);
+}
+
+.aboutFocusItem h4 {
+  margin: 0 0 8px;
+  font-size: 15.5px;
+  line-height: 1.25;
+}
+
+.aboutFocusItem p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.aboutValueSection {
+  margin-top: 18px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 22px;
+  background:
+    radial-gradient(700px 320px at 88% 0%, rgba(34,211,238,.12), transparent 60%),
+    linear-gradient(180deg, var(--surface), transparent);
+  box-shadow: var(--shadow2);
+}
+
+.aboutValueHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.aboutValueHeader h3 {
+  margin: 0;
+  font-size: clamp(21px, 2.4vw, 28px);
+  letter-spacing: -0.4px;
+}
+
+.aboutValueHeader p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.55;
+  max-width: 650px;
+}
+
+.aboutValueGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 1100px) {
+  .aboutValueGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 680px) {
+  .aboutValueGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.aboutValueCard {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 18px;
+  background: rgba(255,255,255,.035);
+  min-height: 172px;
+  transition: transform .18s ease, border-color .18s ease;
+}
+
+.aboutValueCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(124,58,237,.30);
+}
+
+.aboutValueCard__number {
+  display: inline-flex;
+  margin-bottom: 18px;
+  color: var(--accent2);
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.aboutValueCard h4 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.aboutValueCard p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
