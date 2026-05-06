@@ -912,28 +912,35 @@ body {
 }
 
 /* ---------------------------
-   Social icons in hero card
+   Hero card social icons
 ---------------------------- */
 
 .chipLink--icon {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  justify-content: center;
+  gap: 8px;
 }
 
 .chipLink__icon {
-  width: 16px;
-  height: 16px;
+  width: 17px;
+  height: 17px;
   object-fit: contain;
-  display: block;
-  filter: var(--social-icon-filter, none);
+  display: inline-block;
+  flex-shrink: 0;
 }
 
-.chipLink__mailIcon {
-  font-size: 15px;
+.chipLink__emailIcon {
+  width: 17px;
+  height: 17px;
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-size: 16px;
   line-height: 1;
 }
 
+/* En modo oscuro, los SVG negros se vuelven blancos */
 :root:not([data-theme="light"]) .chipLink__icon {
   filter: invert(1);
 }
