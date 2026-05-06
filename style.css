@@ -1,0 +1,3 @@
+/* Punto de entrada CSS principal.
+   Mantiene compatibilidad con el archivo existente segmentado por bloques. */
+@import url("./styles.css");

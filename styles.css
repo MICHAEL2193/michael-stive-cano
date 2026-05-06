@@ -1248,3 +1248,19 @@ body {
   font-size: 14px;
   line-height: 1.6;
 }
+
+/* ---------------------------
+   Experience tools
+---------------------------- */
+
+.experienceTools {
+  margin-top: 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255,255,255,.035);
+}
+
+.experienceTools strong {
+  color: var(--text);
+}

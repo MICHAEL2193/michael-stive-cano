@@ -9,6 +9,16 @@ const PROFILE = {
 };
 
 /* ---------------------------
+   Textos UI
+---------------------------- */
+const UI_TEXT = {
+  showAll: "Show All",
+  showLess: "Show Less",
+  noFilters: "No filters",
+  activeFilters: "Filtros activos:",
+};
+
+/* ---------------------------
    Skills con logo + descripción
    Logos cargados desde Simple Icons CDN.
 ---------------------------- */
@@ -294,7 +304,7 @@ function renderSkills() {
       .join("");
 
     shownEl.textContent = String(visible.length);
-    toggleBtn.textContent = expanded ? "Show Less" : "Show All";
+    toggleBtn.textContent = expanded ? UI_TEXT.showLess : UI_TEXT.showAll;
     toggleBtn.hidden = SKILLS.length <= initialCount;
   }
 
@@ -349,7 +359,10 @@ function renderProjects() {
       button.setAttribute("aria-pressed", String(isPressed));
     });
 
-    infoEl.textContent = activeTags.size === 0 ? "No filters" : `Filtros activos: ${Array.from(activeTags).join(", ")}`;
+    infoEl.textContent =
+      activeTags.size === 0
+        ? UI_TEXT.noFilters
+        : `${UI_TEXT.activeFilters} ${Array.from(activeTags).join(", ")}`;
   }
 
   function paint() {
@@ -358,7 +371,7 @@ function renderProjects() {
 
     grid.innerHTML = visible.map((project) => projectCardHtml(project)).join("");
     shownEl.textContent = String(visible.length);
-    toggleBtn.textContent = expanded ? "Show Less" : "Show All";
+    toggleBtn.textContent = expanded ? UI_TEXT.showLess : UI_TEXT.showAll;
     toggleBtn.hidden = filtered.length <= initialCount;
   }
 
