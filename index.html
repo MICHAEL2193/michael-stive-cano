@@ -13,7 +13,6 @@
 </head>
 
 <body>
-  <!-- Topbar -->
   <header class="topbar" id="top">
     <div class="container topbar__inner">
       <a class="brand" href="#top" aria-label="Inicio">
@@ -25,7 +24,7 @@
       </a>
 
       <nav class="nav" aria-label="Navegación principal">
-        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" type="button">
           <span class="nav__toggleBars" aria-hidden="true"></span>
           <span class="sr-only">Abrir menú</span>
         </button>
@@ -34,6 +33,7 @@
           <a class="nav__link" href="#about">Perfil</a>
           <a class="nav__link" href="#skills">Skills</a>
           <a class="nav__link" href="#education">Educación</a>
+          <a class="nav__link" href="#resume">CV</a>
           <a class="nav__link" href="#experience">Experiencia</a>
           <a class="nav__link" href="#projects">Proyectos</a>
           <a class="nav__link nav__cta" href="#contact">Contacto</a>
@@ -48,7 +48,6 @@
   </header>
 
   <main>
-    <!-- Hero -->
     <section class="hero" aria-label="Presentación">
       <div class="container hero__grid">
         <div class="hero__copy">
@@ -80,7 +79,7 @@
           <div class="btnRow">
             <a class="btn btn--primary" href="#projects">Ver proyectos</a>
             <a class="btn" href="#contact">Contactar</a>
-            <button class="btn btn--ghost" id="printBtn" type="button">Descargar PDF / Imprimir</button>
+            <button class="btn btn--ghost" id="printBtn" type="button">Imprimir / guardar PDF</button>
           </div>
 
           <p class="micro">
@@ -127,14 +126,11 @@
       </div>
     </section>
 
-    <!-- About -->
     <section class="section" id="about">
       <div class="container">
         <div class="sectionHead">
           <h2 class="sectionHead__title">Perfil profesional</h2>
-          <p class="sectionHead__desc">
-            Transición desde operaciones hacia Cloud, DevOps e Infraestructura.
-          </p>
+          <p class="sectionHead__desc">Transición desde operaciones hacia Cloud, DevOps e Infraestructura.</p>
         </div>
 
         <div class="grid2">
@@ -146,7 +142,7 @@
               formación práctica en AWS, Docker, Kubernetes, Terraform, Linux y automatización, además de
               experiencia previa en operaciones, análisis de KPIs, optimización de procesos y mejora continua.
             </p>
-            <p class="card__text">
+            <p class="card__text card__text--spaced">
               Busco una oportunidad Junior / Prácticas en Cloud, DevOps o Infraestructura donde pueda aportar
               capacidad analítica, disciplina operativa, documentación clara y resolución de problemas.
             </p>
@@ -166,20 +162,17 @@
       </div>
     </section>
 
-    <!-- Skills -->
     <section class="section" id="skills">
       <div class="container">
         <div class="sectionHead">
           <h2 class="sectionHead__title">Technical Skills</h2>
           <p class="sectionHead__desc">
-            Tecnologías y herramientas alineadas con mi formación actual y proyectos de portfolio.
+            Tecnologías y herramientas alineadas con mi formación actual, mis proyectos cloud y mi experiencia previa en operaciones.
           </p>
         </div>
 
         <div class="skillsToolbar">
-          <p class="muted">
-            Mostrando <span id="skillsShown">0</span> de <span id="skillsTotal">0</span>
-          </p>
+          <p class="muted">Mostrando <span id="skillsShown">0</span> de <span id="skillsTotal">0</span></p>
           <button class="btn btn--small" id="skillsToggle" type="button">Show All</button>
         </div>
 
@@ -192,14 +185,11 @@
       </div>
     </section>
 
-    <!-- Education -->
     <section class="section" id="education">
       <div class="container">
         <div class="sectionHead">
           <h2 class="sectionHead__title">Educación y certificaciones</h2>
-          <p class="sectionHead__desc">
-            Formación técnica actual en Cloud Computing, AWS y fundamentos de ingeniería.
-          </p>
+          <p class="sectionHead__desc">Formación técnica actual en Cloud Computing, AWS y fundamentos de ingeniería.</p>
         </div>
 
         <div class="timeline" aria-label="Educación">
@@ -233,8 +223,7 @@
               <h3 class="card__title">Ingeniería Industrial</h3>
               <p class="muted">UNAD</p>
               <p class="card__text">
-                Base en procesos, operaciones, análisis, mejora continua, gestión de recursos y resolución
-                estructurada de problemas.
+                Base en procesos, operaciones, análisis, mejora continua, gestión de recursos y resolución estructurada de problemas.
               </p>
             </div>
           </article>
@@ -244,14 +233,12 @@
             <div class="timelineItem__content card">
               <h3 class="card__title">Diplomado en Supply Chain Management</h3>
               <p class="muted">UNAD</p>
-              <p class="card__text">
-                Formación complementaria en cadena de suministro, logística, planificación y gestión operativa.
-              </p>
+              <p class="card__text">Formación complementaria en cadena de suministro, logística, planificación y gestión operativa.</p>
             </div>
           </article>
         </div>
 
-        <div class="grid2" style="margin-top: 24px;">
+        <div class="grid2 educationExtra">
           <article class="card">
             <h3 class="card__title">Certificaciones</h3>
             <ul class="list">
@@ -275,31 +262,32 @@
       </div>
     </section>
 
-    <!-- Resume -->
     <section class="section" id="resume">
       <div class="container">
         <div class="sectionHead">
           <h2 class="sectionHead__title">CV</h2>
-          <p class="sectionHead__desc">
-            Versión web del CV y acceso a descarga cuando subas el PDF al repositorio.
-          </p>
+          <p class="sectionHead__desc">Descarga directa de mi CV actualizado en PDF.</p>
         </div>
 
         <div class="card card--row">
           <div>
             <h3 class="card__title">Descargar CV en PDF</h3>
             <p class="card__text muted">
-              Sube tu CV a una ruta como <b>assets/docs/CV_MICHAEL_CE.pdf</b> y actualiza el enlace.
+              Archivo esperado en el repositorio: <b>assets/docs/CV_MICHAEL_CE.pdf</b>.
             </p>
           </div>
-          <a class="btn btn--primary" href="assets/docs/CV_MICHAEL_CE.pdf" target="_blank" rel="noopener">
-            Download Resume
+          <a
+            class="btn btn--primary"
+            href="assets/docs/CV_MICHAEL_CE.pdf"
+            download="CV_MICHAEL_STIVE_CANO.pdf"
+            type="application/pdf"
+          >
+            Descargar CV
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Experience -->
     <section class="section" id="experience">
       <div class="container">
         <div class="sectionHead">
@@ -316,8 +304,7 @@
               <h3 class="card__title">Cloud Computing & DevOps Trainee</h3>
               <p class="muted">Universitat Politècnica de València (UPV)</p>
               <p class="card__text">
-                Formación práctica en entornos cloud e infraestructura, con foco en AWS, Docker, Kubernetes,
-                Terraform y Linux.
+                Formación práctica en entornos cloud e infraestructura, con foco en AWS, Docker, Kubernetes, Terraform y Linux.
               </p>
               <ul class="list">
                 <li>Desarrollo de laboratorios y proyectos orientados a automatización, despliegues y administración de entornos cloud.</li>
@@ -383,7 +370,6 @@
       </div>
     </section>
 
-    <!-- Projects -->
     <section class="section" id="projects">
       <div class="container">
         <div class="sectionHead">
@@ -394,9 +380,7 @@
         </div>
 
         <div class="projectsTop">
-          <p class="muted">
-            Total projects: <span id="projectsTotal">0</span> · Mostrando: <span id="projectsShown">0</span>
-          </p>
+          <p class="muted">Total projects: <span id="projectsTotal">0</span> · Mostrando: <span id="projectsShown">0</span></p>
           <button class="btn btn--small" id="projectsToggle" type="button">Show All</button>
         </div>
 
@@ -413,35 +397,6 @@
       </div>
     </section>
 
-    <!-- Blogs / Notes -->
-    <section class="section" id="blogs">
-      <div class="container">
-        <div class="sectionHead">
-          <h2 class="sectionHead__title">Notas técnicas ✍️</h2>
-          <p class="sectionHead__desc">
-            Espacio para documentar aprendizajes, troubleshooting y proyectos cloud.
-          </p>
-        </div>
-
-        <div class="grid2">
-          <article class="card">
-            <h3 class="card__title">Cómo diseñé una arquitectura web altamente disponible en AWS</h3>
-            <p class="card__text muted">
-              Próximamente: explicación de VPC, subredes multi-AZ, ALB, Auto Scaling, EC2, Nginx y health checks.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3 class="card__title">De operaciones a Cloud / DevOps</h3>
-            <p class="card__text muted">
-              Próximamente: cómo estoy trasladando experiencia en KPIs, procesos e incidencias hacia entornos cloud.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
     <section class="section" id="contact">
       <div class="container">
         <div class="sectionHead">
@@ -458,16 +413,12 @@
             <div class="contactKV">
               <div class="kv">
                 <p class="kv__k">Email</p>
-                <p class="kv__v">
-                  <a href="mailto:michaelcano2193@gmail.com">michaelcano2193@gmail.com</a>
-                </p>
+                <p class="kv__v"><a href="mailto:michaelcano2193@gmail.com">michaelcano2193@gmail.com</a></p>
               </div>
 
               <div class="kv">
                 <p class="kv__k">Teléfono</p>
-                <p class="kv__v">
-                  <a href="tel:+34643199572">643 199 572</a>
-                </p>
+                <p class="kv__v"><a href="tel:+34643199572">643 199 572</a></p>
               </div>
 
               <div class="kv">
@@ -528,272 +479,6 @@
     </footer>
   </main>
 
-  <script>
-    const skills = [
-      { name: "AWS", group: "Cloud & Infraestructura" },
-      { name: "Microsoft Azure", group: "Cloud & Infraestructura" },
-      { name: "Docker", group: "Contenedores" },
-      { name: "Kubernetes", group: "Orquestación" },
-      { name: "Terraform", group: "IaC y automatización" },
-      { name: "Linux", group: "Sistemas" },
-      { name: "Bash", group: "Scripting" },
-      { name: "Git", group: "Control de versiones" },
-      { name: "GitHub", group: "Control de versiones" },
-      { name: "Python", group: "Desarrollo / Datos" },
-      { name: "Excel avanzado", group: "KPIs / Reporting" },
-      { name: "Power BI", group: "Visualización" },
-      { name: "SAP", group: "ERP / Operaciones" },
-      { name: "Oracle JD Edwards", group: "ERP / Operaciones" },
-      { name: "Nginx", group: "Web / Infraestructura" },
-      { name: "Node.js", group: "Backend / API" }
-    ];
-
-    const projects = [
-      {
-        title: "AWS Highly Available Web Architecture",
-        subtitle: "ALB + Auto Scaling + EC2",
-        description:
-          "Arquitectura web altamente disponible en AWS con VPC multi-AZ, Application Load Balancer, Auto Scaling Group, EC2, Nginx, health checks y tolerancia a fallos.",
-        tags: ["AWS", "EC2", "ALB", "Auto Scaling", "Nginx"],
-        link: "https://github.com/MICHAEL2193/cloud-deploy-platform"
-      },
-      {
-        title: "Cloud Deploy Platform",
-        subtitle: "AWS + Docker + Terraform",
-        description:
-          "Despliegue de una API Node.js con Docker y Nginx, con infraestructura automatizada en AWS mediante Terraform, EC2, IAM y Systems Manager.",
-        tags: ["AWS", "Docker", "Terraform", "Node.js", "SSM"],
-        link: "https://github.com/MICHAEL2193/cloud-deploy-platform"
-      },
-      {
-        title: "miniOIA4DL",
-        subtitle: "Optimización de rendimiento en Deep Learning",
-        description:
-          "Optimización de operaciones Conv2D sobre CIFAR-100 con Python y NumPy, analizando cuellos de botella y mejoras de rendimiento.",
-        tags: ["Python", "NumPy", "Deep Learning", "Performance"],
-        link: "https://github.com/MICHAEL2193/miniOIA4DL"
-      },
-      {
-        title: "Valencia de 15 minutos",
-        subtitle: "Python + Streamlit + GeoData",
-        description:
-          "Dashboard geoespacial con datos oficiales y OpenStreetMap para scoring, clustering y visualización interactiva de accesibilidad urbana.",
-        tags: ["Python", "Streamlit", "GeoData", "Data Science"],
-        link: "https://github.com/MICHAEL2193/Valencia_de_15_minutos"
-      }
-    ];
-
-    const skillsGrid = document.getElementById("skillsGrid");
-    const skillsShown = document.getElementById("skillsShown");
-    const skillsTotal = document.getElementById("skillsTotal");
-    const skillsToggle = document.getElementById("skillsToggle");
-
-    const projectsGrid = document.getElementById("projectsGrid");
-    const projectsTotal = document.getElementById("projectsTotal");
-    const projectsShown = document.getElementById("projectsShown");
-    const projectsToggle = document.getElementById("projectsToggle");
-    const tagRow = document.getElementById("tagRow");
-    const clearTags = document.getElementById("clearTags");
-    const activeTagsInfo = document.getElementById("activeTagsInfo");
-
-    let showAllSkills = false;
-    let showAllProjects = false;
-    let activeTags = [];
-
-    function renderSkills() {
-      if (!skillsGrid) return;
-
-      const visibleSkills = showAllSkills ? skills : skills.slice(0, 12);
-
-      skillsGrid.innerHTML = visibleSkills
-        .map(
-          skill => `
-            <article class="card">
-              <h3 class="card__title">${skill.name}</h3>
-              <p class="card__text muted">${skill.group}</p>
-            </article>
-          `
-        )
-        .join("");
-
-      skillsShown.textContent = visibleSkills.length;
-      skillsTotal.textContent = skills.length;
-      skillsToggle.textContent = showAllSkills ? "Show Less" : "Show All";
-    }
-
-    function getFilteredProjects() {
-      if (activeTags.length === 0) return projects;
-
-      return projects.filter(project =>
-        activeTags.every(tag => project.tags.includes(tag))
-      );
-    }
-
-    function renderTags() {
-      if (!tagRow) return;
-
-      const tags = [...new Set(projects.flatMap(project => project.tags))].sort();
-
-      tagRow.innerHTML = tags
-        .map(
-          tag => `
-            <button
-              class="btn btn--tiny ${activeTags.includes(tag) ? "btn--primary" : ""}"
-              type="button"
-              data-tag="${tag}"
-            >
-              ${tag}
-            </button>
-          `
-        )
-        .join("");
-
-      tagRow.querySelectorAll("[data-tag]").forEach(button => {
-        button.addEventListener("click", () => {
-          const tag = button.dataset.tag;
-
-          if (activeTags.includes(tag)) {
-            activeTags = activeTags.filter(item => item !== tag);
-          } else {
-            activeTags.push(tag);
-          }
-
-          renderTags();
-          renderProjects();
-        });
-      });
-    }
-
-    function renderProjects() {
-      if (!projectsGrid) return;
-
-      const filtered = getFilteredProjects();
-      const visibleProjects = showAllProjects ? filtered : filtered.slice(0, 3);
-
-      projectsGrid.innerHTML = visibleProjects
-        .map(
-          project => `
-            <article class="card">
-              <h3 class="card__title">${project.title}</h3>
-              <p class="muted">${project.subtitle}</p>
-              <p class="card__text">${project.description}</p>
-
-              <div class="pillRow" aria-label="Tags del proyecto">
-                ${project.tags.map(tag => `<span class="pill">${tag}</span>`).join("")}
-              </div>
-
-              <div class="divider"></div>
-
-              <a class="btn btn--primary" href="${project.link}" target="_blank" rel="noopener">
-                Ver proyecto
-              </a>
-            </article>
-          `
-        )
-        .join("");
-
-      projectsTotal.textContent = projects.length;
-      projectsShown.textContent = visibleProjects.length;
-      projectsToggle.textContent = showAllProjects ? "Show Less" : "Show All";
-
-      activeTagsInfo.textContent =
-        activeTags.length === 0 ? "No filters" : `Filtros activos: ${activeTags.join(", ")}`;
-    }
-
-    function setupNavigation() {
-      const navToggle = document.getElementById("navToggle");
-      const navMenu = document.getElementById("navMenu");
-
-      if (!navToggle || !navMenu) return;
-
-      navToggle.addEventListener("click", () => {
-        const expanded = navToggle.getAttribute("aria-expanded") === "true";
-        navToggle.setAttribute("aria-expanded", String(!expanded));
-        navMenu.classList.toggle("is-open");
-      });
-
-      navMenu.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-          navToggle.setAttribute("aria-expanded", "false");
-          navMenu.classList.remove("is-open");
-        });
-      });
-    }
-
-    function setupTheme() {
-      const themeToggle = document.getElementById("themeToggle");
-      const savedTheme = localStorage.getItem("theme");
-
-      if (savedTheme === "light") {
-        document.documentElement.classList.add("light");
-      }
-
-      if (!themeToggle) return;
-
-      themeToggle.addEventListener("click", () => {
-        document.documentElement.classList.toggle("light");
-        const isLight = document.documentElement.classList.contains("light");
-        localStorage.setItem("theme", isLight ? "light" : "dark");
-      });
-    }
-
-    function setupPrint() {
-      const printBtn = document.getElementById("printBtn");
-
-      if (!printBtn) return;
-
-      printBtn.addEventListener("click", () => {
-        window.print();
-      });
-    }
-
-    function setupContactForm() {
-      const form = document.getElementById("contactForm");
-
-      if (!form) return;
-
-      form.addEventListener("submit", event => {
-        event.preventDefault();
-
-        const formData = new FormData(form);
-        const name = formData.get("name");
-        const email = formData.get("email");
-        const message = formData.get("message");
-
-        const subject = encodeURIComponent("Contacto desde portfolio web");
-        const body = encodeURIComponent(
-          `Hola Michael,\n\n${message}\n\nNombre: ${name}\nEmail: ${email}`
-        );
-
-        window.location.href = `mailto:michaelcano2193@gmail.com?subject=${subject}&body=${body}`;
-      });
-    }
-
-    skillsToggle?.addEventListener("click", () => {
-      showAllSkills = !showAllSkills;
-      renderSkills();
-    });
-
-    projectsToggle?.addEventListener("click", () => {
-      showAllProjects = !showAllProjects;
-      renderProjects();
-    });
-
-    clearTags?.addEventListener("click", () => {
-      activeTags = [];
-      renderTags();
-      renderProjects();
-    });
-
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    renderSkills();
-    renderTags();
-    renderProjects();
-    setupNavigation();
-    setupTheme();
-    setupPrint();
-    setupContactForm();
-  </script>
+  <script src="script.js" defer></script>
 </body>
 </html>
