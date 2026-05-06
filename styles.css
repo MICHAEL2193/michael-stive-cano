@@ -1271,3 +1271,22 @@ body {
 .experienceTools strong {
   color: var(--text);
 }
+
+/* ---------------------------
+   Hero card social icons - inline SVG
+---------------------------- */
+
+.chipLink--icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.chipLink__svg {
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  flex-shrink: 0;
+  color: currentColor;
+}
